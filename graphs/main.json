@@ -13,18 +13,8 @@
             "component": "comp-3",
             "metadata": {
                 "label": "comp-3",
-                "x": 648,
-                "y": 180,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "comp-1_3yh7s": {
-            "component": "comp-1",
-            "metadata": {
-                "label": "comp-1",
-                "x": 180,
-                "y": 360,
+                "x": 540,
+                "y": 324,
                 "width": 72,
                 "height": 72
             }
@@ -33,8 +23,18 @@
             "component": "comp-2",
             "metadata": {
                 "label": "comp-2",
-                "x": 432,
-                "y": 288,
+                "x": 360,
+                "y": 468,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "comp-4_a2yo8": {
+            "component": "comp-4",
+            "metadata": {
+                "label": "comp-4",
+                "x": 180,
+                "y": 360,
                 "width": 72,
                 "height": 72
             }
@@ -43,35 +43,27 @@
     "connections": [
         {
             "src": {
-                "process": "comp-1_3yh7s",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "comp-2_pxfk",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
                 "process": "comp-2_pxfk",
                 "port": "out"
             },
             "tgt": {
                 "process": "comp-3_b2g2d",
                 "port": "in"
+            }
+        },
+        {
+            "src": {
+                "process": "comp-4_a2yo8",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "comp-2_pxfk",
+                "port": "in"
             },
             "metadata": {}
         },
         {
-            "data": "{\"message\": \"hello\"}",
-            "tgt": {
-                "process": "comp-1_3yh7s",
-                "port": "config"
-            }
-        },
-        {
-            "data": "{\"message\": \"alien from mars\"}",
+            "data": "{\"message\": \"is the time the aliens from mars landet !\"}",
             "tgt": {
                 "process": "comp-2_pxfk",
                 "port": "config"
