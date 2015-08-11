@@ -1,0 +1,53 @@
+{
+    "properties": {
+        "name": "main",
+        "environment": {
+            "type": "noflo-browser"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "prompts/Alert_o0cl5": {
+            "component": "prompts/Alert",
+            "metadata": {
+                "label": "prompts/Alert",
+                "x": 648,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Repeat_tgka7": {
+            "component": "core/Repeat",
+            "metadata": {
+                "label": "core/Repeat",
+                "x": 396,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "core/Repeat_tgka7",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "prompts/Alert_o0cl5",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "hello world",
+            "tgt": {
+                "process": "core/Repeat_tgka7",
+                "port": "in"
+            }
+        }
+    ]
+}
