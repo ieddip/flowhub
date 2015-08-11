@@ -9,32 +9,32 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "comp-3_rpejv": {
+        "comp-3_b2g2d": {
             "component": "comp-3",
             "metadata": {
                 "label": "comp-3",
-                "x": 684,
-                "y": 216,
+                "x": 648,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
         },
-        "comp-1_uk3yy": {
+        "comp-1_3yh7s": {
             "component": "comp-1",
             "metadata": {
                 "label": "comp-1",
-                "x": 288,
-                "y": 252,
+                "x": 180,
+                "y": 360,
                 "width": 72,
                 "height": 72
             }
         },
-        "comp-2_wv6yp": {
+        "comp-2_pxfk": {
             "component": "comp-2",
             "metadata": {
                 "label": "comp-2",
-                "x": 504,
-                "y": 324,
+                "x": 432,
+                "y": 288,
                 "width": 72,
                 "height": 72
             }
@@ -43,22 +43,22 @@
     "connections": [
         {
             "src": {
-                "process": "comp-1_uk3yy",
+                "process": "comp-1_3yh7s",
                 "port": "out"
             },
             "tgt": {
-                "process": "comp-2_wv6yp",
+                "process": "comp-2_pxfk",
                 "port": "in"
             },
             "metadata": {}
         },
         {
             "src": {
-                "process": "comp-2_wv6yp",
+                "process": "comp-2_pxfk",
                 "port": "out"
             },
             "tgt": {
-                "process": "comp-3_rpejv",
+                "process": "comp-3_b2g2d",
                 "port": "in"
             },
             "metadata": {}
@@ -66,14 +66,14 @@
         {
             "data": "{\"message\": \"hello\"}",
             "tgt": {
-                "process": "comp-2_wv6yp",
+                "process": "comp-1_3yh7s",
                 "port": "config"
             }
         },
         {
-            "data": "{\"message\": \"hello\"}",
+            "data": "{\"message\": \"alien from mars\"}",
             "tgt": {
-                "process": "comp-1_uk3yy",
+                "process": "comp-2_pxfk",
                 "port": "config"
             }
         }
