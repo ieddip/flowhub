@@ -2,29 +2,39 @@
     "properties": {
         "name": "main",
         "environment": {
-            "type": "noflo-browser"
+            "type": "all"
         }
     },
     "inports": {},
     "outports": {},
     "groups": [],
     "processes": {
-        "prompts/Alert_o0cl5": {
-            "component": "prompts/Alert",
+        "comp-3_rpejv": {
+            "component": "comp-3",
             "metadata": {
-                "label": "prompts/Alert",
-                "x": 648,
+                "label": "comp-3",
+                "x": 684,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "comp-1_uk3yy": {
+            "component": "comp-1",
+            "metadata": {
+                "label": "comp-1",
+                "x": 288,
                 "y": 252,
                 "width": 72,
                 "height": 72
             }
         },
-        "core/Repeat_tgka7": {
-            "component": "core/Repeat",
+        "comp-2_wv6yp": {
+            "component": "comp-2",
             "metadata": {
-                "label": "core/Repeat",
-                "x": 396,
-                "y": 252,
+                "label": "comp-2",
+                "x": 504,
+                "y": 324,
                 "width": 72,
                 "height": 72
             }
@@ -33,20 +43,38 @@
     "connections": [
         {
             "src": {
-                "process": "core/Repeat_tgka7",
+                "process": "comp-1_uk3yy",
                 "port": "out"
             },
             "tgt": {
-                "process": "prompts/Alert_o0cl5",
+                "process": "comp-2_wv6yp",
                 "port": "in"
             },
             "metadata": {}
         },
         {
-            "data": "hello world",
+            "src": {
+                "process": "comp-2_wv6yp",
+                "port": "out"
+            },
             "tgt": {
-                "process": "core/Repeat_tgka7",
+                "process": "comp-3_rpejv",
                 "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "{\"message\": \"hello\"}",
+            "tgt": {
+                "process": "comp-2_wv6yp",
+                "port": "config"
+            }
+        },
+        {
+            "data": "{\"message\": \"hello\"}",
+            "tgt": {
+                "process": "comp-1_uk3yy",
+                "port": "config"
             }
         }
     ]
